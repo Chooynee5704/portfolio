@@ -18,8 +18,7 @@ export const translations = {
                 {
                     school: 'FPT University',
                     degree: 'Bachelor of Software Engineering',
-                    time: '2022 - 2026',
-                    gpa: 'GPA: 3.3/4.0'
+                    time: '2022 - 2026'
                 }
             ]
         },
@@ -28,7 +27,7 @@ export const translations = {
                 init: '>_ INITIALIZING_INTRODUCTION_SEQUENCE...',
                 hello: 'HELLO',
                 world: 'WORLD.',
-                desc: 'I am a Software Engineer with a passion for Machine Learning, Deep Learning, and Game Development. I thrive on learning continuously and creating innovative solutions.',
+                desc: 'Software Engineer with 2 years of experience specializing in backend development using Node.js and .NET. Possess a strong interest and solid foundational knowledge in Machine Learning and Deep Learning, with a focus on building practical, scalable software solutions. Proactive, continuously learning, and driven to deliver reliable and efficient systems.',
                 badge1: 'Download_CV',
                 badge2: 'View_Projects'
             },
@@ -60,16 +59,11 @@ export const translations = {
             tech: 'Tech_Stack',
             exp: 'Experience_Log',
             exp_items: [
+            
                 {
-                    role: 'AI Researcher',
-                    company: 'AIC Laboratory',
-                    desc: 'Research on Deep Learning, Machine Learning, Anomaly Detection, and Computer Vision.',
-                    time: 'May 2025 - Jan 2026'
-                },
-                {
-                    role: 'Salesforce Developer Intern',
+                    role: 'ABAP Developer Intern',
                     company: 'FPT Software',
-                    desc: 'Developed Apex backend code, optimized database queries for the Japanese Airplane project, and implemented flows/lightning pages to streamline UX.',
+                    desc: 'Developed and maintained SAP ABAP reports and enhancements for business processes. Worked with SAP data models, internal tables, and database operations.',
                     time: 'Jan 2025 - May 2025'
                 }
             ],
@@ -138,8 +132,8 @@ export const translations = {
                 {
                     school: 'Đại Học FPT',
                     degree: 'Kỹ Sư Phần Mềm',
-                    time: '2022 - 2026',
-                    gpa: 'GPA: 3.3/4.0'
+                    time: '2022 - 2026'
+                    
                 }
             ]
         },

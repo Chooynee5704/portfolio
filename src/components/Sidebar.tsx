@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ lang = 'en' }) => {
       </div>
 
       <div className="text-center mb-12">
-        <h1 className="text-3xl font-bold tracking-tighter mb-2 dark:text-white transition-colors">HUỲNH VƯƠNG KHANG (vkev)</h1>
+        <h1 className="text-3xl font-bold tracking-tighter mb-2 dark:text-white transition-colors">NGUYỄN THỊ PHƯƠNG MAI (Chooy)</h1>
         <div className="inline-block px-3 py-1 bg-gray-100 dark:bg-gray-800 uppercase text-xs tracking-widest text-gray-600 dark:text-gray-300 rounded-sm transition-colors">
           {t.role}
         </div>
@@ -54,15 +54,15 @@ const Sidebar: React.FC<SidebarProps> = ({ lang = 'en' }) => {
           <h3 className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase mb-2 tracking-wider">{t.birth}</h3>
           <div className="flex items-center gap-2 text-sm font-medium dark:text-gray-200 transition-colors">
             <Calendar size={16} />
-            Jun 24, 2004
+            Jul 5, 2004
           </div>
         </div>
 
         <div>
           <h3 className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase mb-2 tracking-wider">{t.contact}</h3>
-          <a href="mailto:khanghv2406@gmail.com" className="flex items-center gap-2 text-sm font-medium hover:text-blue-600 dark:text-gray-200 dark:hover:text-white transition-colors">
+          <a href="mailto:mainee5704@gmail.com" className="flex items-center gap-2 text-sm font-medium hover:text-blue-600 dark:text-gray-200 dark:hover:text-white transition-colors">
             <Mail size={16} />
-            khanghv2406@gmail.com
+            mainee5704@gmail.com
           </a>
         </div>
 
@@ -76,7 +76,6 @@ const Sidebar: React.FC<SidebarProps> = ({ lang = 'en' }) => {
                 <div className="text-[10px] font-bold text-gray-500 dark:text-gray-500 mb-0.5 transition-colors">{item.time}</div>
                 <h4 className="font-bold text-sm leading-tight mb-0.5 dark:text-white transition-colors">{item.school}</h4>
                 <div className="text-xs text-gray-600 dark:text-gray-400 transition-colors">{item.degree}</div>
-                <div className="text-[10px] font-bold text-gray-500 dark:text-gray-500 mt-1 transition-colors">{item.gpa}</div>
               </div>
             ))}
           </div>
