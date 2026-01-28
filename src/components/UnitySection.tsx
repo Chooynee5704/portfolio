@@ -2,12 +2,6 @@ import { useEffect, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { ArrowRight, User, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { translations, type Language } from '../constants/translations';
-import tempusia1 from '../assets/tempusia1.webp';
-import tempusia2 from '../assets/tempusia2.webp';
-import tempusia3 from '../assets/tempusia3.webp';
-import tempusia4 from '../assets/tempusia4.webp';
-import footReplacement1 from '../assets/FootReplacement1.webp';
-import footReplacement2 from '../assets/FootReplacement2.webp';
 import storygame1 from '../assets/storygame1.webp';
 import storygame2 from '../assets/storygame2.webp';
 import storygame3 from '../assets/storygame3.webp';
@@ -16,13 +10,6 @@ import storygame5 from '../assets/storygame5.webp';
 import storygame6 from '../assets/storygame6.webp';
 import storygame8 from '../assets/storygame8.webp';
 import storygame9 from '../assets/storygame9.webp';
-import battleground1 from '../assets/battleground1.webp';
-import battleground2 from '../assets/battleground2.webp';
-import shadercode1 from '../assets/shadercode1.webp';
-import shadercode2 from '../assets/shadercode2.webp';
-import shadercode3 from '../assets/shadercode3.webp';
-import shadercode4 from '../assets/shadercode4.webp';
-import shadercode5 from '../assets/shadercode5.webp';
 
 const LIGHTBOX_CACHE_KEY = 'unity-lightbox-cache-v1';
 const MAX_CACHE_ENTRIES = 15;
@@ -113,16 +100,6 @@ const resolveCachedSrc = async (
 // Static data structure for props that don't need translation
 const staticProjectData: Project[] = [
     {
-        id: 'tempusia',
-        category: 'GAME',
-        quarter: 'Q2',
-        year: '2022',
-        image: tempusia1,
-        link: 'https://store.steampowered.com/app/2054730/Tempusia/',
-        tags: ['Design Pattern', 'Scriptable Render Pipeline', 'Scriptable Objects', 'State Machines', 'Procedural Animation', 'Shader Graph', 'Cinemachine', 'Input System'],
-        gallery: [tempusia1, tempusia2, tempusia3, tempusia4]
-    },
-    {
         id: 'story-game',
         category: 'GAME',
         quarter: 'Q4',
@@ -131,36 +108,6 @@ const staticProjectData: Project[] = [
         link: 'https://github.com/VKev/Unity-Phong-Bac-Story-Game',
         tags: ['Cinemachine', 'URP', 'Volumetric Fog', 'Outline Shader', 'Design Pattern', 'Input System', 'Rigging', 'Procedural Animation', 'Audio Mixer', 'UI/UX'],
         gallery: [storygame1, storygame2, storygame3, storygame4, storygame5, storygame6, storygame8, storygame9]
-    },
-    {
-        id: 'battleground',
-        category: 'GAME',
-        quarter: 'Q3',
-        year: '2024',
-        image: battleground1,
-        link: '#',
-        tags: ['Netcode', 'Particle System', 'VFX Graph', 'GPU Instancing', 'Terrain', 'State Machines'],
-        gallery: [battleground1, battleground2]
-    },
-    {
-        id: 'procedural',
-        category: 'COMMUNITY',
-        quarter: 'Q2',
-        year: '2023',
-        image: footReplacement1,
-        link: 'https://github.com/VKev/Unity-Procedural-Animation/tree/main',
-        tags: ['Procedural Animation', 'Rigging', 'State Machine', 'Inverse Kinematics'],
-        gallery: [footReplacement1, footReplacement2]
-    },
-    {
-        id: 'shader-code',
-        category: 'COMMUNITY',
-        quarter: 'Q3',
-        year: '2023',
-        image: shadercode1,
-        link: 'https://github.com/VKev/Unity-URP-Shaders-Code',
-        tags: ['HLSL', 'Scriptable Render Pipeline', 'Stylized Grass', 'Toon Shader', 'Outline Shader', 'Water Shader', 'Tesselation', 'Reflection Probe', 'Baking Light'],
-        gallery: [shadercode1, shadercode2, shadercode3, shadercode4, shadercode5]
     }
 ];
 

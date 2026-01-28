@@ -2,236 +2,187 @@ export const translations = {
     en: {
         nav: {
             home: 'Home',
-            unity: 'Unity Developer',
-            ai: 'AI Engineer',
             software: 'Software Engineer',
-            status: 'SYSTEM_ONLINE'
+            ai: 'AI Engineer',
+            unity: 'Unity Developer',
+            status: 'Status: Available'
         },
         sidebar: {
-            role: 'Developer',
+            role: 'Software Engineer',
             origin: 'Origin',
-            location: 'Current Location',
-            birth: 'Birth_Date',
+            location: 'Location',
+            birth: 'Birth',
             contact: 'Contact',
             edu: 'Education',
             edu_items: [
                 {
+                    time: '2022 - 2026',
                     school: 'FPT University',
-                    degree: 'Bachelor of Software Engineering',
-                    time: '2022 - 2026'
+                    degree: 'Bachelor of Software Engineering'
                 }
             ]
         },
         home: {
             intro: {
-                init: '>_ INITIALIZING_INTRODUCTION_SEQUENCE...',
-                hello: 'HELLO',
-                world: 'WORLD.',
-                desc: 'Software Engineer with 2 years of experience specializing in backend development using Node.js and .NET. Possess a strong interest and solid foundational knowledge in Machine Learning and Deep Learning, with a focus on building practical, scalable software solutions. Proactive, continuously learning, and driven to deliver reliable and efficient systems.',
-                badge1: 'Download_CV',
-                badge2: 'View_Projects'
+                init: 'Init sequence // 01',
+                hello: 'Hello',
+                world: 'World',
+                desc: 'Backend Developer with 2 years of experience building backend systems using Node.js and .NET. Experienced in developing RESTful APIs, business logic, and database integration. Possesses foundational knowledge of AI and Machine Learning.',
+                badge1: 'Backend Systems',
+                badge2: 'AI Automation'
             },
             hobbies: {
-                h1_label: 'Certificates',
-                h1_title: 'Coursera Certificates',
-                h1_desc: 'Continuous Professional Development & Specialized Specializations.',
-                h2_label: 'Communication',
-                h2_title: 'Languages',
-                h2_desc: 'English: Intermediate\nVietnamese: Proficient',
-                h3_label: 'Achievements',
-                h3_title: '3 Papers Accepted by International Conferences',
-                h3_items: [
-                    {
-                        text: 'Enhance an Efficient Contactless Palm Print Recognition System Tailored for University Environment (SSPS 2025 Accepted)',
-                        link: 'https://ssps.net/2025.html'
-                    },
-                    {
-                        text: 'Real-time Contactless Palm Print Identification System for Uncontrolled and Uncooperative Environment (FETC 2025 Accepted)',
-                        link: 'https://science.fpt.edu.vn/FETC/AcceptedPaper/PaperDetail?id=085894e5-a2ac-4588-2ea8-08ddf05619f7'
-                    },
-                    {
-                        text: 'Unlocking the Potential of Spike-based Transformer Architecture: Investigating Spiking Neural Models for Classification Task (FETC 2025 Accepted)',
-                        link: 'https://science.fpt.edu.vn/FETC/AcceptedPaper/PaperDetail?id=00437dce-53d0-4093-2ea5-08ddf05619f7'
-                    }
-                ],
-                view_cert: 'View Certificate'
+                h1_label: 'Certifications',
+                h1_title: 'Professional Certificates',
+                h1_desc: 'Hands-on learning in backend, cloud, and scalable system design.',
+                h2_label: 'Languages',
+                h2_title: 'Communication',
+                h2_desc: 'Vietnamese (Native)\nEnglish (Professional)',
+                view_cert: 'View Certificates'
             },
-            tech: 'Tech_Stack',
-            exp: 'Experience_Log',
+            tech: 'Tech Stack',
+            exp: 'Experience Log',
             exp_items: [
-            
                 {
+                    time: 'Jan 2025 - May 2025',
                     role: 'ABAP Developer Intern',
                     company: 'FPT Software',
-                    desc: 'Developed and maintained SAP ABAP reports and enhancements for business processes. Worked with SAP data models, internal tables, and database operations.',
-                    time: 'Jan 2025 - May 2025'
+                    desc: 'Developed and maintained SAP ABAP reports and enhancements for business processes. Worked with SAP data models, internal tables, and database operations.'
                 }
-            ],
-
+            ]
         },
         unity: {
-            header: 'DEVELOPMENT_LOG',
-            subheader: 'v.3.1.0 // PROJECT_HISTORY',
-            view: 'View_Project',
-            role_label: 'Role',
-            timeline_label: 'Timeline',
-            filters: ['ALL', 'GAMES', 'COMMUNITY PROJECTS'],
-            next: 'Initializing_Next_Project...',
-            games_title: 'GAMES',
-            community_title: 'COMMUNITY PROJECTS',
+            header: 'Unity Developer',
+            subheader: 'Selected game projects',
+            games_title: 'Games',
+            community_title: 'Community',
+            next: 'Present Day',
+            view: 'View Project',
             projects: [
                 {
-                    id: 'tempusia',
-                    title: 'Tempusia',
-                    desc: 'Based on rewinding time mechanics, Tempusia is a puzzle platformer requiring a clear mind. A Steam game project featuring complex character control and time manipulation.',
-                    role: 'Character Control, Shaders, VFX, Animation, Logic Coding, Level Design'
+                    title: 'Story Game Phong Bac',
+                    description: 'A story game built in URP Unity where player choices affect the ending. Inspired by "Pho Anh Hai".',
+                    role: 'Personal Project'
+                }
+            ]
+        },
+        software: {
+            header: 'Software Engineer',
+            subheader: 'Selected systems and product builds',
+            projects_title: 'Projects',
+            next: 'Present Day',
+            view: 'View Project',
+            projects: [
+                {
+                    title: 'EV Charging Booking System',
+                    description: 'Web-based system for searching EV charging stations and booking charging slots.',
+                    scope: 'Full-stack system'
                 },
                 {
-                    id: 'story-game',
-                    title: 'Story Game PhongBac',
-                    desc: 'A story game built in URP Unity, where player choices affect the ending. Inspired by "Pho Anh Hai". A personal project made in two weeks.',
-                    role: 'Personal Project'
+                    title: 'AI Book Reading & Translation App',
+                    description: 'AI-powered web app for book reading and translation using speech-to-text and machine translation.',
+                    scope: 'AI product platform'
                 },
                 {
-                    id: 'battleground',
-                    title: 'Simple Battleground',
-                    desc: 'A simple Unity multiplayer LAN game where blocky combatants drop into an arena and fight until only one remains standing. Features a shrinking play area and skill drops. Made in 1 week.',
-                    role: 'Personal Project'
-                },
-                {
-                    id: 'procedural',
-                    title: 'Unity Procedural Animation',
-                    desc: 'Community project implementing procedural animation with rigging, player state machine for animation foot placement.',
-                    role: 'Personal Project'
-                },
-                {
-                    id: 'shader-code',
-                    title: 'Unity URP Shaders Code',
-                    desc: 'A collection of shader code for Unity URP including Stylized Grass, Toon Shader, Outline Shader, Water Shader, and Tesselation Shader.',
-                    role: 'Personal Project'
+                    title: 'HoshiVibe',
+                    description: 'E-commerce website for feng shui jewelry with AI-based personalized design customization.',
+                    scope: 'E-commerce platform'
                 }
             ]
         }
     },
     vi: {
         nav: {
-            home: 'Trang Chủ',
-            unity: 'Lập Trình Unity',
-            ai: 'Kỹ Sư AI',
-            software: 'Kỹ Sư Phần Mềm',
-            status: 'HỆ_THỐNG_SẴN_SÀNG'
+            home: 'Trang chủ',
+            software: 'Kỹ sư phần mềm',
+            ai: 'Kỹ sư AI',
+            unity: 'Lập trình Unity',
+            status: 'Trạng thái: Sẵn sàng'
         },
         sidebar: {
-            role: 'Lập Trình Viên',
-            origin: 'Quê Quán',
-            location: 'Hiện Tại',
-            birth: 'Ngày_Sinh',
-            contact: 'Liên Hệ',
-            edu: 'Học Vấn',
+            role: 'Kỹ sư phần mềm',
+            origin: 'Quê quán',
+            location: 'Địa điểm',
+            birth: 'Ngày sinh',
+            contact: 'Liên hệ',
+            edu: 'Học vấn',
             edu_items: [
                 {
-                    school: 'Đại Học FPT',
-                    degree: 'Kỹ Sư Phần Mềm',
-                    time: '2022 - 2026'
-                    
+                    time: '2022 - 2026',
+                    school: 'FPT University',
+                    degree: 'Bachelor of Software Engineering'
                 }
             ]
         },
         home: {
             intro: {
-                init: '>_ KHỞI_TẠO_GIỚI_THIỆU...',
-                hello: 'CHÀO',
-                world: 'THẾ GIỚI.',
-                desc: 'Tôi là Kỹ Sư Phần Mềm với niềm đam mê Học Máy, Deep Learning và Phát Triển Game. Tôi thích học hỏi và tạo ra những điều mới mẻ.',
-                badge1: 'Tải_CV',
-                badge2: 'Xem_Dự_Án'
+                init: 'Khởi tạo // 01',
+                hello: 'Xin chào',
+                world: 'Thế giới',
+                desc: 'Backend Developer với 2 năm kinh nghiệm xây dựng hệ thống backend bằng Node.js và .NET. Có kinh nghiệm phát triển RESTful APIs, business logic và tích hợp cơ sở dữ liệu. Có kiến thức nền tảng về AI và Machine Learning.',
+                badge1: 'Hệ thống Backend',
+                badge2: 'Tự động hóa AI'
             },
             hobbies: {
-                h1_label: 'Chứng Chỉ',
-                h1_title: 'Coursera Certificates',
-                h1_desc: 'Continuous Professional Development & Specialized Specializations.',
-                h2_label: 'Giao Tiếp',
-                h2_title: 'Ngôn Ngữ',
-                h2_desc: 'Tiếng Anh: Trung Cấp\nTiếng Việt: Thành Thạo',
-                h3_label: 'Thành Tựu',
-                h3_title: '3 Bài Báo Được Chấp Nhận Bởi Hội Nghị Quốc Tế',
-                h3_items: [
-                    {
-                        text: 'Enhance an Efficient Contactless Palm Print Recognition System Tailored for University Environment (SSPS 2025 Accepted)',
-                        link: 'https://ssps.net/2025.html'
-                    },
-                    {
-                        text: 'Real-time Contactless Palm Print Identification System for Uncontrolled and Uncooperative Environment (FETC 2025 Accepted)',
-                        link: 'https://science.fpt.edu.vn/FETC/AcceptedPaper/PaperDetail?id=085894e5-a2ac-4588-2ea8-08ddf05619f7'
-                    },
-                    {
-                        text: 'Unlocking the Potential of Spike-based Transformer Architecture: Investigating Spiking Neural Models for Classification Task (FETC 2025 Accepted)',
-                        link: 'https://science.fpt.edu.vn/FETC/AcceptedPaper/PaperDetail?id=00437dce-53d0-4093-2ea5-08ddf05619f7'
-                    }
-                ],
-                view_cert: 'Xem Chứng Chỉ'
+                h1_label: 'Chứng chỉ',
+                h1_title: 'Chứng chỉ chuyên môn',
+                h1_desc: 'Tập trung thực hành backend, cloud và thiết kế hệ thống mở rộng.',
+                h2_label: 'Ngôn ngữ',
+                h2_title: 'Giao tiếp',
+                h2_desc: 'Tiếng Việt (Bản ngữ)\nTiếng Anh (Chuyên nghiệp)',
+                view_cert: 'Xem chứng chỉ'
             },
-            tech: 'Công_Nghệ',
-            exp: 'Kinh_Nghiệm',
+            tech: 'Công nghệ',
+            exp: 'Kinh nghiệm',
             exp_items: [
                 {
-                    role: 'Nghiên Cứu Viên AI',
-                    company: 'AIC Laboratory',
-                    desc: 'Nghiên cứu về Deep Learning, Học Máy, Phát hiện Bất thường và Thị giác Máy tính.',
-                    time: '05/2025 - 01/2026'
-                },
-                {
-                    role: 'Thực tập sinh Lập trình Salesforce',
+                    time: 'Jan 2025 - May 2025',
+                    role: 'Thực tập sinh ABAP Developer',
                     company: 'FPT Software',
-                    desc: 'Phát triển backend Apex, tối ưu hóa truy vấn cơ sở dữ liệu cho dự án Máy bay Nhật Bản, và triển khai flows/trang lightning để cải thiện trải nghiệm người dùng.',
-                    time: '01/2025 - 05/2025'
+                    desc: 'Phát triển và bảo trì báo cáo SAP ABAP và các phần mở rộng cho quy trình nghiệp vụ. Làm việc với mô hình dữ liệu SAP, internal table và thao tác cơ sở dữ liệu.'
                 }
             ]
         },
         unity: {
-            header: 'NHẬT_KÝ_PHÁT_TRIỂN',
-            subheader: 'v.3.1.0 // LỊCH_SỬ_DỰ_ÁN',
-            view: 'Xem_Dự_Án',
-            role_label: 'Vai Trò',
-            timeline_label: 'Thời Gian',
-            filters: ['TẤT CẢ', 'GAMES', 'DỰ ÁN CỘNG ĐỒNG'],
-            next: 'Đang_Khởi_Tạo_Dự_Án_Mới...',
-            games_title: 'GAMES',
-            community_title: 'DỰ ÁN CỘNG ĐỒNG',
+            header: 'Lập trình Unity',
+            subheader: 'Một số dự án game tiêu biểu',
+            games_title: 'Game',
+            community_title: 'Cộng đồng',
+            next: 'Hiện tại',
+            view: 'Xem dự án',
             projects: [
                 {
-                    id: 'tempusia',
-                    title: 'Tempusia',
-                    desc: 'Dựa trên cơ chế đảo ngược thời gian, Tempusia là một game đi cảnh giải đố đòi hỏi một cái đầu lạnh. Dự án game Steam với điều khiển nhân vật phức tạp và thao tác thời gian.',
-                    role: 'Điều khiển nhân vật, Shaders, VFX, Hoạt ảnh, Logic, Thiết kế màn chơi'
+                    title: 'Story Game Phong Bac',
+                    description: 'Game cốt truyện làm bằng Unity URP, lựa chọn của người chơi ảnh hưởng kết thúc. Lấy cảm hứng từ "Phở Anh Hải".',
+                    role: 'Dự án cá nhân'
+                }
+            ]
+        },
+        software: {
+            header: 'Kỹ sư phần mềm',
+            subheader: 'Hệ thống và sản phẩm tiêu biểu',
+            projects_title: 'Dự án',
+            next: 'Hiện tại',
+            view: 'Xem dự án',
+            projects: [
+                {
+                    title: 'EV Charging Booking System',
+                    description: 'Hệ thống web tìm trạm sạc và đặt lịch sạc.',
+                    scope: 'Hệ thống full-stack'
                 },
                 {
-                    id: 'story-game',
-                    title: 'Game Cốt Truyện Phong Bắc',
-                    desc: 'Một tựa game cốt truyện sử dụng URP Unity, nơi lựa chọn của người chơi ảnh hưởng đến kết thúc. Lấy cảm hứng từ "Phố Anh Hải". Dự án cá nhân hoàn thành trong hai tuần.',
-                    role: 'Dự Án Cá Nhân'
+                    title: 'AI Book Reading & Translation App',
+                    description: 'Ứng dụng đọc sách và dịch bằng AI, kết hợp speech-to-text và dịch máy.',
+                    scope: 'Nền tảng sản phẩm AI'
                 },
                 {
-                    id: 'battleground',
-                    title: 'Chiến Trường Đơn Giản',
-                    desc: 'Game LAN multiplayer đơn giản trên Unity, nơi các chiến binh khối hộp nhảy dù xuống đấu trường sinh tử. Tính năng vòng bo thu nhỏ và kỹ năng rơi từ bầu trời. Hoàn thành trong 1 tuần.',
-                    role: 'Dự Án Cá Nhân'
-                },
-                {
-                    id: 'procedural',
-                    title: 'Unity Procedural Animation',
-                    desc: 'Dự án cộng đồng triển khai hoạt ảnh thủ tục với rigging, máy trạng thái người chơi cho vị trí đặt chân hoạt ảnh.',
-                    role: 'Dự Án Cá Nhân'
-                },
-                {
-                    id: 'shader-code',
-                    title: 'Unity URP Shaders Code',
-                    desc: 'Bộ sưu tập shader code cho Unity URP bao gồm Stylized Grass, Toon Shader, Outline Shader, Water Shader và Tesselation Shader.',
-                    role: 'Dự Án Cá Nhân'
+                    title: 'HoshiVibe',
+                    description: 'Website thương mại điện tử trang sức phong thủy với cá nhân hóa thiết kế bằng AI.',
+                    scope: 'Nền tảng thương mại điện tử'
                 }
             ]
         }
     }
-};
+} as const;
 
-export type Language = 'en' | 'vi';
+export type Language = keyof typeof translations;

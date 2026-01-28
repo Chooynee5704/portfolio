@@ -18,9 +18,9 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, onNavigate, theme, toggleT
 
     const navItems: { id: NavItem; label: string }[] = [
         { id: 'home', label: t.home },
-        { id: 'unity', label: t.unity },
-        { id: 'ai', label: t.ai },
         { id: 'software', label: t.software },
+        { id: 'ai', label: t.ai },
+        { id: 'unity', label: t.unity },
     ];
 
     return (

@@ -1,6 +1,6 @@
-import { Award, Circle, ArrowRight, Globe, ChevronDown, Trophy } from 'lucide-react';
+import { Award, Circle, ArrowRight, Globe } from 'lucide-react';
 import { translations, type Language } from '../constants/translations';
-import { useState } from 'react';
+import HomeCritters from './HomeCritters';
 
 interface MainContentProps {
     lang?: Language;
@@ -8,7 +8,7 @@ interface MainContentProps {
 
 const MainContent: React.FC<MainContentProps> = ({ lang = 'en' }) => {
     const t = translations[lang].home;
-    const [isExpanded, setIsExpanded] = useState(true);
+    const languageItems = t.hobbies.h2_desc.split('\n');
 
     return (
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 h-full">
@@ -40,77 +40,74 @@ const MainContent: React.FC<MainContentProps> = ({ lang = 'en' }) => {
 
                 {/* Hobbies Section */}
                 <div className="flex flex-col gap-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
                         {/* Hobby 1 */}
-                        {/* Hobby 1 */}
-                        <a href="https://www.linkedin.com/in/khang-huynh-aa766b37b/details/certifications/" target="_blank" rel="noopener noreferrer" className="bg-white/10 dark:bg-black/10 backdrop-blur-[6px] border border-gray-200 dark:border-gray-800 p-6 relative hover:border-black dark:hover:border-white transition-colors group block">
-                            <div className="flex justify-between items-start mb-12">
+                        <a href="https://www.linkedin.com/in/khang-huynh-aa766b37b/details/certifications/" target="_blank" rel="noopener noreferrer" className="bg-white/10 dark:bg-black/10 backdrop-blur-[6px] border border-gray-200 dark:border-gray-800 p-6 relative hover:border-black dark:hover:border-white transition-colors group block flex flex-col h-full">
+                            <div className="flex justify-between items-start mb-6">
                                 <span className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase">{t.hobbies.h1_label}</span>
                                 <Award className="text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors" />
                             </div>
                             <h3 className="text-xl font-bold mb-2 dark:text-white transition-colors">{t.hobbies.h1_title}</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed transition-colors">
+                                {t.hobbies.h1_desc}
+                            </p>
 
-                            <div className="mt-4 flex items-center gap-2 text-xs font-bold uppercase tracking-wider group-hover:gap-3 transition-all">
+                            <div className="mt-auto pt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-wider group-hover:gap-3 transition-all">
                                 {t.hobbies.view_cert} <ArrowRight size={14} />
                             </div>
                         </a>
 
                         {/* Hobby 2 */}
-                        <div className="bg-white/10 dark:bg-black/10 backdrop-blur-[6px] border border-gray-200 dark:border-gray-800 p-6 relative hover:border-black dark:hover:border-white transition-colors group">
-                            <div className="flex justify-between items-start mb-12">
+                        <div className="bg-white/10 dark:bg-black/10 backdrop-blur-[6px] border border-gray-200 dark:border-gray-800 p-6 relative hover:border-black dark:hover:border-white transition-colors group flex flex-col h-full">
+                            <div className="flex justify-between items-start mb-6">
                                 <span className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase">{t.hobbies.h2_label}</span>
                                 <Globe className="text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors" />
                             </div>
                             <h3 className="text-xl font-bold mb-2 dark:text-white transition-colors">{t.hobbies.h2_title}</h3>
-                            <p className="text-sm text-gray-600 dark:text-gray-400 transition-colors whitespace-pre-wrap">{t.hobbies.h2_desc}</p>
-                        </div>
-                    </div>
-
-                    {/* Hobby 3 - Full Width - Dropdown */}
-                    <div
-                        className="bg-white/10 dark:bg-black/10 backdrop-blur-[6px] border border-gray-200 dark:border-gray-800 p-6 relative hover:border-black dark:hover:border-white transition-colors group cursor-pointer"
-                        onClick={() => setIsExpanded(!isExpanded)}
-                    >
-                        <div className="flex justify-between items-start mb-4">
-                            <span className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase">{t.hobbies.h3_label}</span>
-                            <div className="flex gap-4">
-                                <Trophy className="text-gray-400 group-hover:text-black dark:group-hover:text-white transition-colors" />
-                                <ChevronDown className={`text-gray-400 group-hover:text-black dark:group-hover:text-white transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
-                            </div>
-                        </div>
-                        <h3 className="text-xl font-bold mb-2 dark:text-white transition-colors">{t.hobbies.h3_title}</h3>
-
-                        <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[500px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
-                            <ul className="list-disc pl-5 space-y-2">
-                                {(t.hobbies as any).h3_items?.map((item: { text: string, link: string }, idx: number) => (
-                                    <li key={idx} className="text-sm text-gray-600 dark:text-gray-400 transition-colors leading-relaxed">
-                                        <a href={item.link} target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white hover:underline transition-colors">
-                                            {item.text}
-                                        </a>
+                            <ul className="mt-3 space-y-2">
+                                {languageItems.map((item) => (
+                                    <li key={item} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 transition-colors">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-gray-300 dark:bg-gray-600" />
+                                        <span>{item}</span>
                                     </li>
                                 ))}
                             </ul>
                         </div>
                     </div>
+
+                    <HomeCritters />
+
                 </div>
             </div>
 
             {/* Right Column: Tech Stack + Experience Log */}
             <div className="lg:col-span-1 flex flex-col gap-8">
                 {/* Tech Stack */}
-                {/* Tech Stack */}
                 <div className="bg-white/10 dark:bg-black/10 backdrop-blur-[6px] border border-gray-200 dark:border-gray-800 p-8 shadow-sm transition-colors">
                     <div className="mb-6 dark:text-white transition-colors">
                         <h3 className="font-bold uppercase tracking-wider">{t.tech}</h3>
                     </div>
 
-                    <div className="flex flex-wrap gap-2">
-                        {['C#', '.NET', 'Unity', 'Python', 'PyTorch', 'AWS', 'Cloudflare', 'TypeScript', 'HLSL', 'Git', 'CI/CD', 'Docker', 'Terraform'].map((tech) => (
-                            <span key={tech} className="px-3 py-1.5 border border-gray-200 dark:border-gray-700 bg-white/50 dark:bg-black/20 text-xs font-bold uppercase tracking-wider text-gray-600 dark:text-gray-300 transition-colors hover:border-black dark:hover:border-white cursor-default">
-                                {tech}
-                            </span>
-                        ))}
-                    </div>
+                    <ul className="space-y-3 text-xs tracking-wider text-gray-600 dark:text-gray-300 list-disc pl-4 marker:text-gray-300 dark:marker:text-gray-600">
+                        <li className="leading-relaxed">
+                            <span className="font-bold text-gray-800 dark:text-gray-100">BACKEND:</span> NODE.JS, .NET (C#), ASP.NET CORE, RESTFUL APIS, BUSINESS LOGIC, MICROSERVICES.
+                        </li>
+                        <li className="leading-relaxed">
+                            <span className="font-bold text-gray-800 dark:text-gray-100">DATABASE:</span> MONGODB, RELATIONAL DATABASES, SCHEMA DESIGN, QUERY OPTIMIZATION.
+                        </li>
+                        <li className="leading-relaxed">
+                            <span className="font-bold text-gray-800 dark:text-gray-100">CLOUD & DEVOPS:</span> AWS (EC2, ECS), DOCKER, TERRAFORM, CI/CD.
+                        </li>
+                        <li className="leading-relaxed">
+                            <span className="font-bold text-gray-800 dark:text-gray-100">AI & AUTOMATION:</span> RAG (N8N), AI WORKFLOW INTEGRATION, MACHINE LEARNING FOUNDATIONAL.
+                        </li>
+                        <li className="leading-relaxed">
+                            <span className="font-bold text-gray-800 dark:text-gray-100">FRONTEND:</span> REACT.JS, REACT NATIVE.
+                        </li>
+                        <li className="leading-relaxed">
+                            <span className="font-bold text-gray-800 dark:text-gray-100">TOOLS:</span> GIT, API TESTING, SYSTEM INTEGRATION.
+                        </li>
+                    </ul>
                 </div>
 
 

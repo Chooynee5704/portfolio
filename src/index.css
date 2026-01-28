@@ -6,6 +6,7 @@
 
   --animate-fade-in: fade-in 0.8s ease-out;
   --animate-slide-up: slide-up 0.8s ease-out;
+  --animate-cat-scroll: cat-scroll 18s linear infinite;
 
   @keyframes fade-in {
     0% {
@@ -26,6 +27,16 @@
     100% {
       transform: translateY(0);
       opacity: 1;
+    }
+  }
+
+  @keyframes cat-scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
     }
   }
 }
@@ -59,4 +70,38 @@ body {
 .dark body {
   background: #0a0a0a;
   color: #ededed;
+}
+
+.cat-marquee {
+  position: relative;
+  overflow: hidden;
+  height: 86px;
+}
+
+.cat-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 22px;
+  animation: cat-scroll 18s linear infinite;
+}
+
+.cat-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 78px;
+}
+
+.cat-item img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cat-track {
+    animation: none;
+  }
 }
