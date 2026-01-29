@@ -105,7 +105,7 @@ const staticProjectData: Project[] = [
         quarter: 'Q4',
         year: '2024',
         image: storygame1,
-        link: 'https://github.com/VKev/Unity-Phong-Bac-Story-Game',
+        link: 'https://github.com/Chooynee5704/-Unity-Phong-Bac-Story-Game.git',
         tags: ['Cinemachine', 'URP', 'Volumetric Fog', 'Outline Shader', 'Design Pattern', 'Input System', 'Rigging', 'Procedural Animation', 'Audio Mixer', 'UI/UX'],
         gallery: [storygame1, storygame2, storygame3, storygame4, storygame5, storygame6, storygame8, storygame9]
     }

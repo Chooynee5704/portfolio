@@ -83,13 +83,13 @@ const Sidebar: React.FC<SidebarProps> = ({ lang = 'en' }) => {
       </div>
 
       <div className="flex gap-4 mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 justify-center transition-colors">
-        <a href="https://github.com/VKev" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded border border-gray-200 dark:border-gray-700 transition-colors dark:text-white">
+        <a href="https://github.com/Chooynee5704" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded border border-gray-200 dark:border-gray-700 transition-colors dark:text-white">
           <Github size={20} />
         </a>
         <a href="https://www.linkedin.com/in/khang-huynh-aa766b37b/" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded border border-gray-200 dark:border-gray-700 transition-colors dark:text-white">
           <Linkedin size={20} />
         </a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded border border-gray-200 dark:border-gray-700 transition-colors dark:text-white">
+        <a href="https://www.facebook.com/imchooyluvu/" target="_blank" rel="noopener noreferrer" className="p-2 bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 rounded border border-gray-200 dark:border-gray-700 transition-colors dark:text-white">
           <Facebook size={20} />
         </a>
       </div>

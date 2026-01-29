@@ -5,6 +5,7 @@ import Background from './components/Background';
 import Navbar from './components/Navbar';
 import UnitySection from './components/UnitySection';
 import SoftwareSection from './components/SoftwareSection';
+import ScreenPets from './components/ScreenPet';
 import type { Language } from './constants/translations';
 
 type ViewState = 'home' | 'unity' | 'ai' | 'software';
@@ -65,6 +66,7 @@ function App() {
   return (
     <div className="min-h-screen text-black dark:text-white font-mono selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black p-4 md:p-12 relative overflow-hidden transition-colors duration-300">
       <Background theme={theme} />
+      <ScreenPets />
 
       <Navbar
         currentView={currentView}
