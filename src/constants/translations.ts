@@ -51,6 +51,30 @@ export const translations = {
                 }
             ]
         },
+        ai: {
+            header: 'AI Engineer',
+            subheader: 'Selected AI systems and automations',
+            projects_title: 'Projects',
+            next: 'Present Day',
+            view: 'View Project',
+            projects: [
+                {
+                    title: 'Plant Insight',
+                    description: 'Image-based AI model that recognizes plants. Trained end-to-end using Google Colab and deployed with a lightweight Node.js API.',
+                    scope: 'Vision & API Pipeline'
+                },
+                {
+                    title: 'RAG Chatbot for LearnMate',
+                    description: 'n8n RAG chatbot that translates English to Vietnamese and uses speech-to-text to power the LearnMate reading app.',
+                    scope: 'Conversational AI Platform'
+                },
+                {
+                    title: 'AI Photoshop for Jewelry',
+                    description: 'Nano Banana + n8n workflow that lets clients customize jewelry images through AI-guided editing.',
+                    scope: 'Creative AI Studio'
+                }
+            ]
+        },
         unity: {
             header: 'Unity Developer',
             subheader: 'Selected game projects',
@@ -140,6 +164,30 @@ export const translations = {
                     role: 'Thực tập sinh ABAP Developer',
                     company: 'FPT Software',
                     desc: 'Phát triển và bảo trì báo cáo SAP ABAP và các phần mở rộng cho quy trình nghiệp vụ. Làm việc với mô hình dữ liệu SAP, internal table và thao tác cơ sở dữ liệu.'
+                }
+            ]
+        },
+        ai: {
+            header: 'Kỹ sư AI',
+            subheader: 'Các hệ thống và tự động hóa AI tiêu biểu',
+            projects_title: 'Các dự án',
+            next: 'Hiện tại',
+            view: 'Xem dự án',
+            projects: [
+                {
+                    title: 'Plant Insight',
+                    description: 'Mô hình AI nhận diện thực vật từ hình ảnh, được huấn luyện trên Google Colab và triển khai bằng API Node.js nhẹ nhàng.',
+                    scope: 'Vision & API Pipeline'
+                },
+                {
+                    title: 'RAG Chatbot cho LearnMate',
+                    description: 'Chatbot n8n RAG dịch tiếng Anh sang tiếng Việt và tích hợp speech-to-text để hỗ trợ app đọc sách.',
+                    scope: 'Nền tảng AI hội thoại'
+                },
+                {
+                    title: 'AI Photoshop trang sức',
+                    description: 'Workflow Nano Banana + n8n cho phép khách hàng tùy chỉnh hình ảnh trang sức bằng chỉnh sửa do AI điều hướng.',
+                    scope: 'Studio AI sáng tạo'
                 }
             ]
         },

@@ -5,6 +5,7 @@ import Background from './components/Background';
 import Navbar from './components/Navbar';
 import UnitySection from './components/UnitySection';
 import SoftwareSection from './components/SoftwareSection';
+import AISection from './components/AISection';
 import ScreenPets from './components/ScreenPet';
 import type { Language } from './constants/translations';
 
@@ -84,7 +85,7 @@ function App() {
           <span className="hidden sm:inline">|</span>
           <span className="hidden sm:inline">Bio_Metrics: Normal</span>
           <div className="hidden md:block animate-pulse ml-4">
-            /// ACCESSING_DATABASE: {currentView.toUpperCase()}
+            {'/// ACCESSING_DATABASE: ' + currentView.toUpperCase()}
           </div>
         </div>
       </div>
@@ -108,7 +109,9 @@ function App() {
 
         {currentView === 'software' && <SoftwareSection lang={lang} />}
 
-        {currentView !== 'home' && currentView !== 'unity' && currentView !== 'software' && (
+        {currentView === 'ai' && <AISection lang={lang} />}
+
+        {currentView !== 'home' && currentView !== 'unity' && currentView !== 'software' && currentView !== 'ai' && (
           <div className="flex flex-col items-center justify-center h-[500px] border border-gray-200 dark:border-gray-800 bg-white/10 dark:bg-black/10 backdrop-blur-[6px] p-12 transition-colors">
             <div className="text-4xl font-bold mb-4 uppercase tracking-tighter">
               {currentView.replace('-', ' ')}
