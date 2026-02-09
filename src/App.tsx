@@ -114,7 +114,7 @@ function App() {
         {currentView !== 'home' && currentView !== 'unity' && currentView !== 'software' && currentView !== 'ai' && (
           <div className="flex flex-col items-center justify-center h-[500px] border border-gray-200 dark:border-gray-800 bg-white/10 dark:bg-black/10 backdrop-blur-[6px] p-12 transition-colors">
             <div className="text-4xl font-bold mb-4 uppercase tracking-tighter">
-              {currentView.replace('-', ' ')}
+              UNKNOWN MODULE
             </div>
             <div className="text-gray-500 font-mono text-sm mb-8">
               &gt;_ MODULE_UNDER_CONSTRUCTION
