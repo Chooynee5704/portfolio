@@ -171,10 +171,10 @@ const ProjectCard = ({
     openLightbox: (gallery: string[]) => void;
 }) => {
     return (
-        <div className="relative flex flex-col md:flex-row gap-8 mb-12">
+        <div className="relative flex flex-col md:flex-row gap-8 mb-12 animate-[slide-up]">
             <div className="md:w-[110px] flex-shrink-0 flex md:flex-col md:items-end justify-start md:pt-8 relative pl-6 md:pl-0 z-10">
-                <div className="absolute left-[3px] md:left-auto md:right-[-5px] top-[5px] md:top-[38px] w-[11px] h-[11px] rounded-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 z-10 box-border" />
-                <div className="text-xs font-bold text-gray-400 dark:text-gray-500 text-right pr-4 md:pr-6">
+                <div className="absolute left-[3px] md:left-auto md:right-[-5px] top-[5px] md:top-[38px] w-[13px] h-[13px] rounded-full border-2 border-gray-300 dark:border-gray-500 bg-white dark:bg-gray-900 shadow-[0_0_0_4px_rgba(0,0,0,0.02)] dark:shadow-[0_0_0_4px_rgba(255,255,255,0.04)]" />
+                <div className="text-xs font-semibold text-gray-400 dark:text-gray-500 text-right pr-4 md:pr-6 tracking-[0.18em] uppercase">
                     <span className="block">{project.quarter}</span>
                     <span className="block">{project.year}</span>
                 </div>
@@ -182,7 +182,7 @@ const ProjectCard = ({
 
             <div className="flex-1">
                 <div
-                    className="bg-white/10 dark:bg-black/10 border border-gray-200 dark:border-gray-800 hover:border-black dark:hover:border-white transition-all duration-300 group"
+                    className="bg-white/70 dark:bg-black/40 border border-gray-200/80 dark:border-gray-800/80 hover:border-black dark:hover:border-white transition-all duration-500 group rounded-2xl shadow-[0_18px_45px_rgba(15,23,42,0.12)] dark:shadow-[0_18px_45px_rgba(0,0,0,0.7)] overflow-hidden"
                     style={{ backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)' }}
                 >
                     <div className={`flex flex-col md:items-start ${isReversed ? 'md:flex-row-reverse' : 'md:flex-row'}`}>
@@ -194,38 +194,44 @@ const ProjectCard = ({
                             <img
                                 src={project.image}
                                 alt={project.title || project.posterTitle}
-                                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                                className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-[0.8deg]"
                             />
-                            <div className={`absolute inset-0 ${project.posterGradient} mix-blend-multiply opacity-70`} aria-hidden="true" />
+                            <div className={`absolute inset-0 ${project.posterGradient} mix-blend-multiply opacity-80`} aria-hidden="true" />
                             <div
                                 className="absolute inset-0 opacity-30 bg-[linear-gradient(120deg,rgba(255,255,255,0.35)_1px,transparent_1px),linear-gradient(0deg,rgba(255,255,255,0.25)_1px,transparent_1px)] bg-[size:22px_22px]"
                                 aria-hidden="true"
                             />
-                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                                <span className="bg-black/60 text-white px-3 py-1 text-xs font-bold uppercase backdrop-blur-sm border border-white/20">
+                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/25 transition-colors duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                                <span className="bg-black/70 text-white px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] backdrop-blur-sm border border-white/20">
                                     View Gallery
                                 </span>
                             </div>
                             <div className="relative z-10 h-full p-6 flex flex-col justify-end text-white text-left">
-                                <div className="text-lg font-bold tracking-tight">{project.posterTitle}</div>
-                                <div className="text-xs uppercase tracking-widest text-white/80">{project.posterSubtitle}</div>
+                                <div className="inline-flex items-center gap-2 mb-2">
+                                    <span className="inline-block h-[1px] w-6 bg-white/70" />
+                                    <span className="text-[11px] font-semibold uppercase tracking-[0.22em] text-white/70">
+                                        {project.category}
+                                    </span>
+                                </div>
+                                <div className="text-lg font-bold tracking-tight leading-tight">{project.posterTitle}</div>
+                                <div className="text-xs uppercase tracking-[0.22em] text-white/80 mt-1">{project.posterSubtitle}</div>
                             </div>
                         </button>
 
                         <div className="flex-1 p-6 flex flex-col">
                             <div className="flex justify-between items-start mb-4">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-black dark:bg-white" />
-                                    <h3 className="text-xl font-bold tracking-tight dark:text-white transition-colors">
+                                    <div className="w-2 h-2 rounded-sm bg-black dark:bg-white shadow-[0_0_0_3px_rgba(0,0,0,0.08)] dark:shadow-[0_0_0_3px_rgba(255,255,255,0.22)]" />
+                                    <h3 className="text-xl font-semibold tracking-tight dark:text-white transition-colors">
                                         {project.title}
                                     </h3>
                                 </div>
-                                <span className="text-[10px] font-bold border border-gray-200 dark:border-gray-700 px-2 py-1 uppercase text-gray-500 dark:text-gray-400">
+                                <span className="text-[10px] font-semibold border border-gray-200 dark:border-gray-700 px-2 py-1 rounded-full uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400 bg-white/70 dark:bg-white/5 backdrop-blur-sm">
                                     {project.category}
                                 </span>
                             </div>
 
-                            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 flex-1 lowercase">
+                            <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6 flex-1">
                                 {project.description}
                             </p>
 
@@ -375,12 +381,36 @@ const SoftwareSection: React.FC<SoftwareSectionProps> = ({ lang = 'en' }) => {
                     setCurrentGallery([]);
                 }}
             />
-            <div className="flex items-center justify-between mb-12">
+            <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-5 animate-[fade-in]">
                 <div>
-                    <h2 className="text-xl font-bold tracking-tighter uppercase transition-colors bg-black text-white dark:bg-white dark:text-black px-2 inline-block mb-1">
+                    <h2 className="text-[10px] font-semibold tracking-[0.26em] text-gray-400 dark:text-gray-500 uppercase mb-2">
                         {t.header}
                     </h2>
-                    <div className="text-xs text-gray-500 font-mono">{t.subheader}</div>
+                    <h3 className="text-xl md:text-2xl font-semibold tracking-tight leading-snug mb-2">
+                        <span className="px-2 py-1 bg-black text-white dark:bg-white dark:text-black inline-block rounded-md">
+                            Software Engineering
+                        </span>{' '}
+                        <span className="text-gray-500 dark:text-gray-400 text-sm md:text-base">
+                            Experience
+                        </span>
+                    </h3>
+                    <div className="text-[11px] md:text-xs text-gray-500 dark:text-gray-400 max-w-lg leading-relaxed">
+                        {t.header}
+                        {' — '}
+                        {t.subheader}
+                    </div>
+                </div>
+
+                <div className="flex flex-wrap gap-2 text-[9px] font-semibold uppercase tracking-[0.18em] text-gray-500 dark:text-gray-400">
+                    <span className="px-3 py-[3px] border border-gray-200 dark:border-gray-700 rounded-full bg-white/60 dark:bg-white/5 backdrop-blur-sm">
+                        Full‑stack Systems
+                    </span>
+                    <span className="px-3 py-[3px] border border-gray-200 dark:border-gray-700 rounded-full bg-white/60 dark:bg-white/5 backdrop-blur-sm">
+                        AI Products
+                    </span>
+                    <span className="px-3 py-[3px] border border-gray-200 dark:border-gray-700 rounded-full bg-white/60 dark:bg-white/5 backdrop-blur-sm">
+                        E‑commerce
+                    </span>
                 </div>
             </div>
 
